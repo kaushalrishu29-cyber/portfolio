@@ -60,6 +60,11 @@ nav .menu a:hover {
     
 
 }
+.menu_icon
+{
+    display:none;
+}
+
 /* MAIN CONTENT */
 .content {
     max-width: 700px;
@@ -110,4 +115,64 @@ footer {
 .div
 {
     text-align: center;
+}
+
+.banner
+{
+    align-items: center;
+    background-color: aquamarine;
+    height: 700px;
+    width: 100%;
+
+display: flex;
+justify-content: center;
+align-items: center;
+    
+}
+.banner img{
+    align-items: center;
+    height:100%;
+    width:400px;
+    object-fit: cover;
+}
+.background{
+    height: 1000px;
+    width:100%;
+    background-image: url('../resources/image/img2.jpeg');
+       background-repeat:no-repeat ;
+       background-size:contain;
+}
+
+
+
+@media(max-width:480px){
+    body{
+background-color:rgb(247, 247, 247);}
+    
+
+.logo{
+    height: 40px;
+    width: 40px;
+    font-size:14px;
+}
+    .menu{
+        display:none;
+    }
+
+.menu_icon{
+    display:block;
+    height: 40px !important;
+    width: 4opx !important;
+
+}
+.menu_icon svg{
+    
+    color: white;
+
+}
+.banner
+{
+    height: 300px;
+    
+}
 }
