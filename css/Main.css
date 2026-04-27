@@ -53,6 +53,7 @@ nav .menu a {
 }
  
 nav .menu a:hover { 
+     
     color:rgb(255, 255, 255);
     text-decoration: underline;
     font-size: large;
@@ -75,7 +76,7 @@ nav .menu a:hover {
 h1 {
     font-size: 28px;
     margin-bottom: 10px;
-    color:rgb(30, 192, 60);
+    color:rgb(0, 0, 0);
     
 }
 
@@ -117,12 +118,57 @@ footer {
     text-align: center;
 }
 
+.banner_main{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    width: 90%; 
+    margin: 0px auto;
+}
+
+.banner_data{
+    display: flex;
+    flex-direction: column;
+    gap : 26px;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+.banner_data h1{
+    margin: 0px;
+    padding: 0px;
+    font-size: 44px;
+    font-style:italic;
+}
+ 
+.banner_data div{
+    font-size: 38px;
+    text-transform:capitalize;
+    font-weight: 700;
+
+}
+
+.banner_buttons button{
+   
+    padding: 14px 22px;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 10px;
+    animation: alternate infinite  .3s buttonanimate;
+}
+
+
+
+
 .banner
 {
     align-items: center;
-    background-color: aquamarine;
-    height: 700px;
-    width: 100%;
+    background-color: rgb(243, 243, 243);
+    height: 600px;
+    width: 90%;
+    margin: 20px 0px;
+    border-radius: 20px;
+    overflow: clip;
 
 display: flex;
 justify-content: center;
@@ -131,23 +177,42 @@ align-items: center;
 }
 .banner img{
     align-items: center;
-    height:100%;
+    height:60%;
     width:400px;
     object-fit: cover;
 }
-.background{
+/* .background{
     height: 1000px;
     width:100%;
     background-image: url('../resources/image/img2.jpeg');
        background-repeat:no-repeat ;
        background-size:contain;
+} */
+
+@keyframes buttonanimate{
+    0%{
+         background-color: rgb(210, 165, 165);
+        /* transform: rotate(0edge); */
+    }
+    25%{
+        background-color: green;
+    }
+    50%{
+        background-color: yellow;
+    }
+    75%{
+        background-color: rgb(185, 185, 165);
+    }
+    100%{
+        background-color: rgb(0, 255, 157);
+    }
+    
 }
-
-
 
 @media(max-width:480px){
     body{
-background-color:rgb(247, 247, 247);}
+background-color:rgb(247, 247, 247);
+}
     
 
 .logo{
@@ -166,14 +231,17 @@ background-color:rgb(247, 247, 247);}
 
 }
 .menu_icon svg{
+    /* background-color: red; */
     
-    color: white;
-    background-color: #555;
+    /* color: white; */
+    width: 30px !important;
+    height: 30px !important;
+    
+    
 
 }
-.banner
-{
-    height: 300px;
-    
+.menu_icon svg path{
+    color: green !important;
+    stroke-width: 3px !important;
 }
 }
